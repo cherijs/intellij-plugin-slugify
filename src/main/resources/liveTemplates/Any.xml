@@ -1,13 +1,16 @@
-<templateSet group="Any">
+<templateSet group="HTML/XML">
     <template name="slugify"
               value="$TEXT$"
               description="Convert selected text to slug"
-              toReformat="true"
+              toReformat="false"
               toShortenFQNames="false">
-        <variable name="TEXT" expression="slugify(SELECTION)" defaultValue="the_quick_brown_fox" alwaysStopAt="true"/>
+        <variable name="TEXT"
+                  expression="slugify(SELECTION)"
+                  defaultValue=""
+                  alwaysStopAt="false"/>
         <context>
-            <option name="HTML" value="true"/>
-            <option name="VUE_TEMPLATE" value="true"/>
+            <option name="OTHER" value="true"/>
         </context>
     </template>
 </templateSet>
+
