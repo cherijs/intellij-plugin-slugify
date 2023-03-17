@@ -17,6 +17,12 @@
     <extensions defaultExtensionNs="com.intellij">
         <defaultLiveTemplates file="/liveTemplates/Any.xml"/>
         <liveTemplateMacro implementation="org.intellij.sdk.liveTemplates.SlugifyMacro"/>
+        <applicationConfigurable
+                groupId="tools"
+                id="slugifySettings"
+                displayName="Slugify Settings"
+                instance="com.github.cherijs.intellijpluginslugify.SlugifySettingsProvider"
+        />
     </extensions>
 
 </idea-plugin>
