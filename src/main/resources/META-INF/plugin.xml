@@ -19,7 +19,4 @@
         <liveTemplateMacro implementation="org.intellij.sdk.liveTemplates.SlugifyMacro"/>
     </extensions>
 
-    <applicationListeners>
-        <listener class="com.github.cherijs.intellijpluginslugify.listeners.SlugifyFrameStateListener" topic="com.intellij.ide.FrameStateListener"/>
-    </applicationListeners>
 </idea-plugin>
