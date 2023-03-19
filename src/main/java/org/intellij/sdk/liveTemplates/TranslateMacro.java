@@ -15,6 +15,7 @@ import java.net.URLEncoder;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.nio.charset.StandardCharsets;
 
 
 public class TranslateMacro extends MacroBase {
@@ -69,7 +70,7 @@ public class TranslateMacro extends MacroBase {
         try {
             // Build the URL for the API request
             String url = API_BASE_URL + settings.apiKey
-                    + "&q=" + URLEncoder.encode(text, "UTF-8")
+                    + "&q=" + URLEncoder.encode(text, StandardCharsets.UTF_8)
                     + "&target=" + settings.language;
 
             // Create an HTTP client and request
@@ -83,7 +84,7 @@ public class TranslateMacro extends MacroBase {
             // Send the request and parse the response
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
-            System.out.println(response.body());
+//            System.out.println(response.body());
 
             json = JsonParser.parseString(response.body()).getAsJsonObject();
 
