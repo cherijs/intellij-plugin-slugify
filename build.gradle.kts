@@ -25,11 +25,15 @@ version = properties("pluginVersion").get()
 // Configure project's dependencies
 repositories {
     mavenCentral()
+//    maven {
+//        url = uri("https://www.jetbrains.com/intellij-repository/releases")
+//    }
 }
 
 dependencies {
+//    implementation("com.google.cloud:google-cloud-translate:2.2.0")
+//    implementation("com.intellij:uiDesigner")
 }
-
 // Set the JVM language level used to build the project. Use Java 11 for 2020.3+, and Java 17 for 2022.2+.
 kotlin {
     jvmToolchain(11)

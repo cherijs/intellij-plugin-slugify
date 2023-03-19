@@ -17,12 +17,17 @@
     <extensions defaultExtensionNs="com.intellij">
         <defaultLiveTemplates file="/liveTemplates/Any.xml"/>
         <liveTemplateMacro implementation="org.intellij.sdk.liveTemplates.SlugifyMacro"/>
+        <liveTemplateMacro implementation="org.intellij.sdk.liveTemplates.TranslateMacro"/>
+        <liveTemplateMacro implementation="org.intellij.sdk.liveTemplates.SlugifyTranslateMacro"/>
         <applicationConfigurable
-                groupId="tools"
-                id="slugifySettings"
-                displayName="Slugify Settings"
-                instance="com.github.cherijs.intellijpluginslugify.SlugifySettingsProvider"
-        />
+                parentId="tools"
+                instance="com.github.cherijs.intellijpluginslugify.AppSettingsConfigurable"
+                id="com.github.cherijs.intellijpluginslugify.AppSettingsConfigurable"
+                displayName="Slugify Settings"/>
+        <applicationService
+                serviceImplementation="com.github.cherijs.intellijpluginslugify.AppSettingsState"/>
+        <notificationGroup id="Slugify" name="X" displayType="STICKY_BALLOON" />
     </extensions>
+
 
 </idea-plugin>

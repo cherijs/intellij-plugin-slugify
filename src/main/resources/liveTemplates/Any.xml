@@ -7,7 +7,33 @@
         <variable name="TEXT"
                   expression="slugify(SELECTION)"
                   defaultValue=""
-                  alwaysStopAt="false"/>
+                  alwaysStopAt="true"/>
+        <context>
+            <option name="OTHER" value="true"/>
+        </context>
+    </template>
+    <template name="translate"
+              value="$TEXT$"
+              description="Translate selected text"
+              toReformat="false"
+              toShortenFQNames="false">
+        <variable name="TEXT"
+                  expression="translate(SELECTION)"
+                  defaultValue=""
+                  alwaysStopAt="true"/>
+        <context>
+            <option name="OTHER" value="true"/>
+        </context>
+    </template>
+    <template name="translate_slugify"
+              value="$TEXT$"
+              description="Translate than slugify selected text"
+              toReformat="false"
+              toShortenFQNames="false">
+        <variable name="TEXT"
+                  expression="translate_slugify(SELECTION)"
+                  defaultValue=""
+                  alwaysStopAt="true"/>
         <context>
             <option name="OTHER" value="true"/>
         </context>
