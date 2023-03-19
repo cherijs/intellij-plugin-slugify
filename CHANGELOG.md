@@ -1,14 +1,14 @@
 <!-- Keep a Changelog guide -> https://keepachangelog.com -->
 
-# intellij-plugin-slugify Changelog
+# Slugify Expressions Changelog
 
-## [0.0.3]
+## [0.0.3] - 2022-03-20
 
 ### Added
 
 - Added keymap shortcut ctrl shift T to translate selected text
 
-## [0.0.2]
+## [0.0.2] - 2022-03-19
 
 ### Added
 
