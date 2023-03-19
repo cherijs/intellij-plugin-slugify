@@ -17,9 +17,9 @@ public class AppSettingsComponent {
     private final JPanel settingsMainPanel;
     private final JBTextField apiKeyText = new JBTextField();
     private final JBCheckBox enabledCheckBox = new JBCheckBox("Enabled");
-    private final ComboBox<Language> languageDropdown = new ComboBox<Language>();
+    private final ComboBox<Language> languageDropdown = new ComboBox<>();
 
-    private Language[] languages = {
+    private final Language[] languages = {
             new Language("af", "Afrikaans"),
             new Language("ak", "Akan"),
             new Language("sq", "Albanian"),
@@ -217,8 +217,6 @@ public class AppSettingsComponent {
         if (index != -1) {
 //            System.out.println("Index of ak language: " + index);
             languageDropdown.setSelectedItem(languages[index]);
-        } else {
-//            System.out.println("ak language not found in the languages array.");
         }
 
     }
