@@ -164,10 +164,6 @@ public class AppSettingsComponent {
         }
 
 
-//        enabledCheckBox.addChangeListener(e -> {
-//            apiKeyText.setEnabled(enabledCheckBox.isSelected());
-//        });
-
         settingsMainPanel = FormBuilder.createFormBuilder()
                 .addComponent(enabledCheckBox, 1)
                 .addLabeledComponent(new JBLabel("Enter google translate api key: "), apiKeyText, 4, true)
@@ -204,6 +200,9 @@ public class AppSettingsComponent {
 
     public String getLanguage() {
         Language selectedLanguage = (Language) languageDropdown.getSelectedItem();
+        if(selectedLanguage == null){
+            return "en";
+        }
         return selectedLanguage.getCode();
     }
 
