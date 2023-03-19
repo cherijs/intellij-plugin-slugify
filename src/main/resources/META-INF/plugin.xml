@@ -26,7 +26,7 @@
                 displayName="Slugify Settings"/>
         <applicationService
                 serviceImplementation="com.github.cherijs.intellijpluginslugify.AppSettingsState"/>
-        <notificationGroup id="Slugify" name="X" displayType="STICKY_BALLOON" />
+        <notificationGroup id="Slugify" displayType="STICKY_BALLOON" />
     </extensions>
 
 
