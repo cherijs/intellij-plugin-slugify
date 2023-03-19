@@ -65,7 +65,7 @@ public class TranslateMacro extends MacroBase {
 
         settings.lastSearch = text;
 
-        JsonObject json = null;
+        JsonObject json;
 
         try {
             // Build the URL for the API request
