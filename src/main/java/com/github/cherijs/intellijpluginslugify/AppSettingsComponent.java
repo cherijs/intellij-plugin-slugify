@@ -13,6 +13,7 @@ import javax.swing.*;
  * Supports creating and managing a {@link JPanel} for the Settings Dialog.
  */
 public class AppSettingsComponent {
+    private static final AppSettingsState settings = AppSettingsState.getInstance();
 
     private final JPanel settingsMainPanel;
     private final JBTextField apiKeyText = new JBTextField();
@@ -162,7 +163,7 @@ public class AppSettingsComponent {
         for (Language language : languages) {
             languageDropdown.addItem(language);
         }
-
+        this.setLanguage(settings.language);
 
         settingsMainPanel = FormBuilder.createFormBuilder()
                 .addComponent(enabledCheckBox, 1)
@@ -186,7 +187,7 @@ public class AppSettingsComponent {
         return apiKeyText.getText();
     }
 
-    public void setApiKeyText(@NotNull String newText) {
+    public void setApiKeyText(String newText) {
         apiKeyText.setText(newText);
     }
 
