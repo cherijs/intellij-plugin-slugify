@@ -1,7 +1,7 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.cherijs.intellijpluginslugify</id>
-    <name>Slugify expression</name>
+    <name>Slugify Expression</name>
     <vendor>Artūrs Cirsis</vendor>
     <description>
         <![CDATA[
@@ -11,8 +11,6 @@
     </description>
     <depends>com.intellij.modules.lang</depends>
     <depends>com.intellij.modules.platform</depends>
-
-    <resource-bundle>messages.SlugifyBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
         <defaultLiveTemplates file="/liveTemplates/Any.xml"/>

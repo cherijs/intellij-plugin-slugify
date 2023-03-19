@@ -8,6 +8,7 @@ import com.intellij.codeInsight.template.macro.MacroBase;
 import com.intellij.notification.Notification;
 import com.intellij.notification.NotificationType;
 import com.intellij.notification.Notifications;
+import com.intellij.openapi.diagnostic.Logger;
 import org.jetbrains.annotations.NotNull;
 
 import java.net.URI;
@@ -19,6 +20,7 @@ import java.nio.charset.StandardCharsets;
 
 
 public class TranslateMacro extends MacroBase {
+    private static final Logger LOG = Logger.getInstance(TranslateMacro.class);
 
     private static final String API_BASE_URL = "https://translation.googleapis.com/language/translate/v2?key=";
 
@@ -99,10 +101,12 @@ public class TranslateMacro extends MacroBase {
                 );
                 // Show the notification
                 Notifications.Bus.notify(notification);
+                LOG.error(e.getMessage());
             }
 
             // Log any errors and return the original text
-            e.printStackTrace();
+//            e.printStackTrace();
+
             return text;
         }
 
@@ -128,9 +132,11 @@ public class TranslateMacro extends MacroBase {
                         NotificationType.ERROR
                 );
                 Notifications.Bus.notify(notification);
+                LOG.error(message);
             } else {
                 // Log any errors and return the original text
-                e.printStackTrace();
+//                e.printStackTrace();
+                LOG.error(e.getMessage());
             }
             return text;
         }
