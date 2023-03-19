@@ -93,7 +93,7 @@ public class TranslateMacro extends MacroBase {
                 // Create a notification with the exception message
                 Notification notification = new Notification(
                         "Slugify",
-                        "Translation Error",
+                        "Translation error",
                         e.getMessage(),
                         NotificationType.ERROR
                 );
@@ -123,7 +123,7 @@ public class TranslateMacro extends MacroBase {
             if (message != null) {
                 Notification notification = new Notification(
                         "Slugify",
-                        "Translation Error",
+                        "Translation error",
                         message,
                         NotificationType.ERROR
                 );

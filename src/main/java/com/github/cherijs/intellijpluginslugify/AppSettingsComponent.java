@@ -216,10 +216,10 @@ public class AppSettingsComponent {
             }
         }
         if (index != -1) {
-            System.out.println("Index of ak language: " + index);
+//            System.out.println("Index of ak language: " + index);
             languageDropdown.setSelectedItem(languages[index]);
         } else {
-            System.out.println("ak language not found in the languages array.");
+//            System.out.println("ak language not found in the languages array.");
         }
 
     }
