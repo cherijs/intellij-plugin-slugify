@@ -2,7 +2,7 @@
 
 # Slugify Expressions Changelog
 
-## [0.0.3] - 2022-03-20
+## [Unreleased]
 
 ### Added
 
