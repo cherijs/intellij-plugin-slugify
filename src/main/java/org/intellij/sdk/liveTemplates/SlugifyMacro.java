@@ -143,7 +143,6 @@ public class SlugifyMacro extends MacroBase {
         translitMap.put('я', "ya");
 
         StringBuilder builder = new StringBuilder();
-        System.out.println(cyrillic.toCharArray());
         for (char c : cyrillic.toCharArray()) {
             if (translitMap.containsKey(c)) {
                 builder.append(translitMap.get(c));
