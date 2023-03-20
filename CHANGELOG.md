@@ -1,6 +1,6 @@
 <!-- Keep a Changelog guide -> https://keepachangelog.com -->
 
-# Slugify Expressions Changelog
+# Translate and Slugify Expressions Changelog
 
 ## [Unreleased]
 

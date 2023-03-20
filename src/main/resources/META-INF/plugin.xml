@@ -1,12 +1,20 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.cherijs.intellijpluginslugify</id>
-    <name>Slugify Expression</name>
+    <name>Translate and Slugify Expressions</name>
     <vendor>Artūrs Cirsis</vendor>
     <description>
         <![CDATA[
-        Adds slugify(String) liveTemplates expression.<br>
-        And adds a "slugify" entry to the <b>Preferences | Editor | Live Templates</b> dialog.
+        Easily convert and translate text on-the-fly, making it a valuable tool for any developer who needs to work with international content.
+        This plugin provides several useful features for developers.
+
+        It includes the following liveTemplate expressions: slugify(String), translate(String), and translate_slugify(String).
+        The `slugify` expression converts the selected text to a URL-friendly format, while the `translate` expression utilizes the Google Translate API to translate the selected text to any language.
+        The `translate_slugify` expression combines both functionalities from translate and slugify to produce URL-friendly translated text.
+
+        In addition to the liveTemplate expressions, this plugin also adds `slugify`, `translate_slugify`, and `translate` entries to the <b>Preferences | Editor | Live Templates</b>.
+
+        And now, with the new update, you can also use the shortcut ctrl+shift+T to quickly translate the selected text to any language.
         ]]>
     </description>
     <change-notes>
