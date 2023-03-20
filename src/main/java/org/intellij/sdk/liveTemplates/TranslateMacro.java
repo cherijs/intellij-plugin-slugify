@@ -48,9 +48,10 @@ public class TranslateMacro extends MacroBase {
         if (text == null) {
             return null;
         }
-        if ((text.equals(settings.lastSearch) || text.equals(settings.lastTranslation)) && settings.lastTranslation != null) {
+        if (text.equals(settings.lastSearch)  && settings.lastTranslation != null) {
             return new TextResult(settings.lastTranslation);
         }
+        settings.lastSearch = text;
 
         // Translate text to English using Google Translate API
         text = translateText(text);
@@ -64,8 +65,6 @@ public class TranslateMacro extends MacroBase {
             // Return the original text if the API key is not set
             return text;
         }
-
-        settings.lastSearch = text;
 
         JsonObject json;
 

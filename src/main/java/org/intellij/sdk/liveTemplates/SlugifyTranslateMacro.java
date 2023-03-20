@@ -28,14 +28,12 @@ public class SlugifyTranslateMacro extends MacroBase {
         // Retrieve the text from the macro or selection, if any is available.
         String text = getTextResult(params, context, true);
 
-
         if (text == null) {
             return null;
         }
-        if ((text.equals(settings.lastSearch) || text.equals(settings.lastTranslationSlug)) && settings.lastTranslationSlug != null) {
+        if (text.equals(settings.lastSearch) && settings.lastTranslationSlug != null) {
             return new TextResult(settings.lastTranslationSlug);
         }
-
         settings.lastSearch = text;
 
         text = TranslateMacro.translateText(text);
